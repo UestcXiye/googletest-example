@@ -1,0 +1,27 @@
+# Build outputs
+out/
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+CTestTestfile.cmake
+Testing/
+_deps/
+CMakeUserPresets.json
+compile_commands.json
+
+# Compiled artifacts
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# macOS
+.DS_Store
+
+# Editor settings
+.vscode/
+.idea/
