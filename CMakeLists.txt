@@ -71,3 +71,7 @@ add_test(NAME test_utility COMMAND test_utility)
 add_executable(test_database test_database.cpp)
 target_link_libraries(test_database gtest_main)
 add_test(NAME test_database COMMAND test_database)
+
+add_executable(test_add_param test_add_param.cpp)
+target_link_libraries(test_add_param gtest_main)
+add_test(NAME test_add_param COMMAND test_add_param)
