@@ -67,3 +67,7 @@ add_test(NAME test_bank_vault COMMAND test_bank_vault)
 add_executable(test_utility test_utility.cpp)
 target_link_libraries(test_utility gtest_main)
 add_test(NAME test_utility COMMAND test_utility)
+
+add_executable(test_database test_database.cpp)
+target_link_libraries(test_database gtest_main)
+add_test(NAME test_database COMMAND test_database)
