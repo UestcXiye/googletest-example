@@ -1,14 +1,13 @@
-#include <iostream>
+#include <gtest/gtest.h>
 
-#include "max.h"
+#include "custom_listener.h"
 
-using namespace std;
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
 
-int main(int argc, char* argv[])
-{
-    // 使用 max 函数
-    int a = 10, b = 20;
-    cout << "Max of " << a << " and " << b << " is: " << max(a, b) << endl;
+    ::testing::TestEventListeners& listeners =
+        ::testing::UnitTest::GetInstance()->listeners();
+    listeners.Append(new CustomListener("test_log.txt"));
 
-    return 0;
+    return RUN_ALL_TESTS();
 }

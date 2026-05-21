@@ -9,9 +9,6 @@ target_include_directories(example_lib PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-add_executable(main src/main.cpp)
-target_link_libraries(main PRIVATE example_lib)
-
 # 下载并包含 GoogleTest
 include(FetchContent)
 FetchContent_Declare(
@@ -22,9 +19,13 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
+add_executable(main src/main.cpp tests/test_max.cpp)
+target_link_libraries(main PRIVATE example_lib gtest)
+
 # 启用测试
 include(CTest)
 enable_testing()
+add_test(NAME custom_listener_demo COMMAND main)
 
 function(add_gtest_target target)
     add_executable(${target} ${ARGN})
