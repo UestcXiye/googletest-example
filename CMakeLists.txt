@@ -57,6 +57,7 @@ add_gtest_target(test_bank_vault tests/test_bank_vault.cpp)
 add_gtest_target(test_utility tests/test_utility.cpp)
 add_gtest_target(test_database tests/test_database.cpp)
 add_gtest_target(test_add_param tests/test_add_param.cpp)
+add_gtest_target(test_custom_assertion tests/test_custom_assertion.cpp)
 add_gtest_target(test_calculator_namespace tests/test_calculator_namespace.cpp)
 add_gtest_target(test_calculator_nested_namespace tests/test_calculator_nested_namespace.cpp)
 
