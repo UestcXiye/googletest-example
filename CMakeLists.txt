@@ -38,6 +38,13 @@ add_executable(test_global_environment tests/test_global_environment.cpp)
 target_link_libraries(test_global_environment PRIVATE example_lib gtest)
 add_test(NAME test_global_environment COMMAND test_global_environment)
 
+add_executable(test_program_iteration tests/test_program_iteration.cpp)
+target_link_libraries(test_program_iteration PRIVATE gtest)
+add_test(
+    NAME test_program_iteration
+    COMMAND test_program_iteration --gtest_repeat=2
+)
+
 add_gtest_target(test_max tests/test_max.cpp)
 add_gtest_target(test_min tests/test_min.cpp)
 add_gtest_target(test_prime tests/test_prime.cpp)
