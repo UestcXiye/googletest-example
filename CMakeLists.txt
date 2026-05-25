@@ -33,10 +33,10 @@ function(add_gtest_target target)
     add_test(NAME ${target} COMMAND ${target})
 endfunction()
 
-# test_main 有自定义 main，所以链接 gtest 而不是 gtest_main
-add_executable(test_main tests/test_main.cpp)
-target_link_libraries(test_main PRIVATE example_lib gtest)
-add_test(NAME test_main COMMAND test_main)
+# test_global_environment 有自定义 main，用于演示全局测试环境事件
+add_executable(test_global_environment tests/test_global_environment.cpp)
+target_link_libraries(test_global_environment PRIVATE example_lib gtest)
+add_test(NAME test_global_environment COMMAND test_global_environment)
 
 add_gtest_target(test_max tests/test_max.cpp)
 add_gtest_target(test_min tests/test_min.cpp)
