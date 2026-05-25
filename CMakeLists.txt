@@ -50,6 +50,8 @@ add_gtest_target(test_bank_vault tests/test_bank_vault.cpp)
 add_gtest_target(test_utility tests/test_utility.cpp)
 add_gtest_target(test_database tests/test_database.cpp)
 add_gtest_target(test_add_param tests/test_add_param.cpp)
+add_gtest_target(test_calculator_namespace tests/test_calculator_namespace.cpp)
+add_gtest_target(test_calculator_nested_namespace tests/test_calculator_nested_namespace.cpp)
 
 add_executable(test_network_client tests/test_network_client.cpp)
 target_link_libraries(test_network_client PRIVATE example_lib gmock_main)
